@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLASHFEED</title>
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="{{url_for('static',filename ='demo.js')}}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!--slider-->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+</head>
+<style>
+ *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behaviour: smooth;
+}
+:root{
+--bg-color:#ffffff;
+--text-color:#111111;
+--main-color:#c8815f;
+--big-font: 4.5rem;
+--h2-font: 3.3rem;
+--h3-font: 2rem;
+--normal-font: 1rem;
+}
+<!---header-->
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 20px 14%;
+    transition: all .35s ease;
+}
+.logo{
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    color: black;
+    font-weight: 600;
+    padding: 10px 25px;
+    font-size: 20px;
+    transition: all .36s ease;
+    text-decoration: none;
+}
+.navlist a:hover{
+    color: red;
+}
+.header-icons i{
+    font-size: 32px;
+    color: red;
+    margin-right: 20px;
+    transition: all .36s ease;
+}
+.header-icons i:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 34px;
+    color: var(--text-color);
+    z-index: 10001;
+    margin-right: 20px;
+    display: none;
+}
+<!---slider--->
+ body
+        {
+            margin: 0;
+        }
+        #containerSlider
+        {
+            margin: auto;
+            width: 90%;
+            text-align: center;
+            padding-top: 100px;
+            box-sizing: border-box;
+        }
+        #containerSlider img
+        {
+            width: 100%;
+            height: 140%;
+            text-align: center;
+            align-content: center;
+        }
+        @media(max-width: 732px)
+        {
+            #containerSlider img
+            {
+                height: 12em;
+            }
+        }
+        @media(max-width: 500px)
+        {
+            #containerSlider img
+            {
+                height: 10em;
+            }
+        }
+Header.sticky{
+    background: var (--bg-color);
+    padding: 14px 14%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+.center-text{
+    text-align: center;
+}
+.center-text h2{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+.featured-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  gap: 6rem;
+  align-items: center;
+  margin-top: 4rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-bottom:3rem;
+}
+
+.row{
+    position: relative;
+    transition: all .35s ease;
+}
+
+.row img{
+    width: 100%;
+    height: auto;
+}
+.fea-text{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+.fea-text h5{
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+.fea-text p{
+    color: #555;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.row .arrow{
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+}
+.row .arrow i{
+    height: 35px;
+    width: 35px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .35s ease;
+}
+.row:hover{
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+}
+.row:hover i{
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+.cta{
+    height: 80vh;
+    width: 100%;
+    background: url("{{url_for('static',filename = 'back.jpg')}}");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.cta-text h6{
+    font-size: 3.3rem;
+    font-weight: bold;
+    letter-spacing: .6px;
+    margin-bottom: 14px;
+    color: red;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.cta-text h4{
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: .1rem;
+    margin-bottom: 20px;
+    color: white;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.cta-text button{
+    display: inline-block;
+    padding: 13px 25px;
+    background: white;
+    color:var(--bg--color);
+    font-size:15px;
+    letter-spacing:1px;
+    margin-left: 8rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all .35s ease;
+}
+.cta-text button:hover{
+    transform: translateY(-5px);
+    background: red;
+}
+.new-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  gap: 1.3rem;
+  align-items: center;
+  margin-top: 4rem;
+  text-align: center;
+  color: #555;
+}
+.box{
+    position: relative;
+    transition: all .40s ease;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.box h1{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.box p{
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    margin-bottom:2px;
+}
+    .button {
+      width: 100px;
+      height: 40px;
+      border-radius: 20px; /* Half of width and height */
+      background-color: rgb(0, 113, 34);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .button a{
+      color: #fff;
+      font-size: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      }
+
+    .button:hover {
+      background-color: rgb(0, 113, 34);
+    }
+.box:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+}
+.brand{
+    padding: 50px 14%;
+}
+.brand-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+.main img{
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+.main img:hover{
+    opacity: 1;
+}
+.checked {
+  color: orange;
+}
+<!--footer>
+  .footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+  margin: auto;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+.footer-basic ul a:hover {
+  opacity:1;
+}
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+  .button-container {
+    /* ... Centering styles ... */
+  }
+  .image-section {
+    width: 85%;
+    height: 100vh;
+    margin-left: 8.5rem;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: 100%;
+  }
+    .image-section h1{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    }
+</style>
+<body>
+<!-----header---->
+<header id="Header">
+
+        <a href="#" class="logo">FlashFeed</a>
+
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured">Product</a></li>
+            <li><a href="#new">New</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="header-icons">
+            <a href="#"><i class='bx bx-shopping-bag'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+<section>
+            <div id="containerSlider">
+                <div id="slidingImage1"> <img src="{{url_for('static',filename = 'img1.png')}}"  alt="image1"> </div>
+                <div id="slidingImage2"> <img src="{{url_for('static',filename = 'img2.png')}}"  alt="image2"> </div>
+                <div id="slidingImage3"> <img src="{{url_for('static',filename = 'img3.png')}}"  alt="image3"> </div>
+                <div id="slidingImage4"> <img src="{{url_for('static',filename = 'img4.png')}}"  alt="image4"> </div>
+            </div>
+    </section>
+<br>
+    <!-- <script src=“https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js”></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script>
+        $(document).ready(function()
+        {
+        $('#containerSlider').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            });
+        });
+    </script>
+
+<!--featured-->
+    <section class="featured" id="featured">
+        <div class="center-text">
+            <h2>Featured Categories</h2>
+        </div>
+
+         <div class="featured-content">
+            <div class="row">
+                <img src="{{url_for('static',filename = 'men1.jpg')}}">
+                <div class="fea-text">
+                    <h5>Mens</h5>
+                    <p>10 items</p>
+                </div>
+                <div class="arrow">
+                    <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+
+              <div class="row">
+                <img src="{{url_for('static',filename = 'men2.jpg')}}">
+                <div class="fea-text">
+                    <h5>Mens</h5>
+                    <p>10 items</p>
+                </div>
+                <div class="arrow">
+                    <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+
+              <div class="row">
+                <img src="{{url_for('static',filename = 'men3.jpg')}}">
+                <div class="fea-text">
+                    <h5>Mens</h5>
+                    <p>10 items</p>
+                </div>
+                <div class="arrow">
+                    <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+
+              <div class="row">
+                <img src="{{url_for('static',filename = 'women1.jpeg')}}">
+                <div class="fea-text">
+                    <h5>Women</h5>
+                    <p>10 items</p>
+                </div>
+                <div class="arrow">
+                    <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+
+              <div class="row">
+                <img src="{{url_for('static',filename = 'women2.jpg')}}">
+                <div class="fea-text">
+                    <h5>Women</h5>
+                    <p>10 items</p>
+                </div>
+                <div class="arrow">
+                    <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+
+              <div class="row">
+                <img src="{{url_for('static',filename = 'women3.jpg')}}">
+                <div class="fea-text">
+                    <h5>Women</h5>
+                    <p>10 items</p>
+                </div>
+                <div class="arrow">
+                    <a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<br>
+<!-----cta--->
+<section class="cta">
+    <div class="cta-text">
+        <h6> FlashFeed </h6>
+        <h4> Free-thinkers,culture-makers and originators- <br> Welcome to FlashFeed </h4>
+        <button>Show Now</button>
+        >
+    </div>
+</section>
+<br>
+<!--new---->
+<section class="new" id="new">
+    <div class="center-text">
+        <h2>New Arrivals</h2>
+    </div>
+
+    <div class="new-content">
+        <div class="box">
+            <img src="{{url_for('static',filename = 'xxx.png')}}">
+            <h1>PUMA TEE</h1>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p class="price">₹3,599</p>
+            <p><button class="button"><a href=move_forward>Add Cart</a></button></p>
+        </div>
+         <div class="box">
+            <img src="{{url_for('static',filename = 'men thigts.png')}}">
+            <h1>PUMA Shorts</h1>
+             <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <p class="price">₹4,599</p>
+             <p><button class="button"><a href=move_forward>Add Cart</a></button></p>
+        </div>
+         <div class="box">
+            <img src="{{url_for('static',filename = 'men track.png')}}">
+            <h1>NIKE Track</h1>
+             <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p class="price">₹7,999</p>
+             <p> <button class="button"><a href=move_forward>Add Cart</a></button></p>
+        </div>
+         <div class="box">
+            <img src="{{url_for('static',filename = 'shoe.png')}}">
+            <h1>ADIDAS Shoe</h1>
+             <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p class="price">₹10,999</p>
+            <p> <button class="button"><a href=move_forward>Add Cart</a></button></p>
+        </div>
+         <div class="box">
+            <img src="{{url_for('static',filename = 'xxx1.png')}}">
+            <h1>Full Skirt</h1>
+             <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p class="price">₹2,499</p>
+            <p> <button class="button"><a href=move_forward>Add Cart</a></button></p>
+        </div>
+         <div class="box">
+            <img src="{{url_for('static',filename = 'women pant.png')}}">
+            <h1>GRAPHIC PANTS</h1>
+             <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <p class="price">₹3,999</p>
+            <p> <button class="button"><a href=move_forward>Add Cart</a></button></p>
+        </div>
+        <div class="box">
+            <img src="{{url_for('static',filename = 'xxx2.png')}}">
+            <h1>Levi's Sleeve</h1>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p class="price">₹3,499</p>
+            <p> <button class="button"><a href=move_forward>Add Cart</a></button></p>
+        </div>
+        <div class="box">
+            <img src="{{url_for('static',filename = 'women shorts.png')}}">
+            <h1>CITY ESCAPE SHORTS</h1>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p class="price">₹4,299</p>
+            <p> <button class="button"><a href=move_forward>Add Cart</a></button></p>
+        </div>
+    </div>
+</section>
+<br>
+<!--brand-->
+<section class="brand">
+    <div class="brand-content">
+        <div class="main">
+            <img src="{{url_for('static',filename = 'adidas.png')}}">
+        </div>
+          <div class="main">
+            <img src="{{url_for('static',filename = 'puma.png')}}">
+        </div>
+          <div class="main">
+            <img src="{{url_for('static',filename = 'zara.png')}}">
+        </div>
+          <div class="main">
+            <img src="{{url_for('static',filename = 'levis.png')}}">
+        </div>
+          <div class="main">
+            <img src="{{url_for('static',filename = 'tommy.png')}}">
+        </div>
+          <div class="main">
+            <img src="{{url_for('static',filename = 'van.png')}}">
+        </div>
+    </div>
+</section>
+<br>
+<section class="image-section">
+    <h1>Dashboard</h1>
+<img src="{{url_for('static',filename = 'dashboard (1).png')}}" alt="Description of the image" width="300" height="200" class="image-style">
+</section>
+<br>
+        <footer>
+            <div class="footer-basic">
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">©1999-2023 FLASHFEED,Inc</p>
+            </div>
+        </footer>
+</body>
+</html>
